@@ -1,5 +1,5 @@
 # Project Name: Excercise 1
- Lorem ipsum page by Vue 3
+ Lorem ipsum Page by Vue 3
 
 ## 🚀 Main features
 - Responsive interface.
@@ -15,6 +15,7 @@
 - git clone https://github.com/HoDangSan/MAV-assessment.git
 
 2. Setup Project
+- cd excercise1
 - npm install
  
 3. Run Project

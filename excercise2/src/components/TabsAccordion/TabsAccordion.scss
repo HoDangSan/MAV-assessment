@@ -1,0 +1,167 @@
+.tabs {
+  &__nav {
+    display: none;
+  }
+
+  &__nav-item {
+    font-size: 16px;
+    padding: 16px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    border-radius: 8px 8px 0px 0px;
+
+    &--active {
+      color: #000;
+      background: #ddd;
+    }
+  }
+
+  &__panel {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__accordion-trigger {
+    width: 100%;
+    font-size: 16px;
+    padding: 20px;
+    background: #fff;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #ddd;
+    }
+
+    &--active {
+      background: #ddd;
+    }
+  }
+
+  &__accordion-title {
+    flex: 1;
+    padding-right: 16px;
+  }
+
+  &__accordion-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    position: relative;
+    flex-shrink: 0;
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__accordion-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    position: relative;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      background 0.3s ease;
+  }
+
+  &__accordion-icon-line {
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  &__accordion-icon-line--vertical {
+    transform: rotate(90deg);
+  }
+
+  &__accordion-icon--active {
+    transform: rotate(45deg);
+    background: #f1f1f1;
+  }
+
+  &__panel-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.25s ease;
+    opacity: 0;
+  }
+
+  &__panel-body {
+    overflow: hidden;
+    padding: 0 20px;
+  }
+
+  &__panel--active &__panel-wrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  &__panel--active &__panel-body {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    &__nav {
+      display: flex;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    &__accordion-trigger {
+      display: none;
+    }
+
+    &__content {
+      position: relative;
+    }
+
+    &__panel {
+      position: absolute;
+      inset: 0;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease;
+    }
+
+    &__panel--active {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__panel-wrapper {
+      display: block;
+      grid-template-rows: none;
+      opacity: 1;
+    }
+
+    &__panel-body {
+      padding: 24px 0;
+    }
+  }
+}
