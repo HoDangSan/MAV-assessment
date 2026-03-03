@@ -1,5 +1,24 @@
-# Vue 3 + TypeScript + Vite
+# Project Name: Excercise 1
+ Lorem ipsum page by Vue 3
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 🚀 Main features
+- Responsive interface.
+- Integrated Tailwind CSS.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🛠️ Technology used
+-  Vue 3 (typescript), Vite, SCSS, tailwind CSS.
+
+## 📦 Installation instructions
+- To run this project on your local machine, follow these steps:
+
+1. Clone project:
+- git clone https://github.com/HoDangSan/MAV-assessment.git
+
+2. Setup Project
+- npm install
+ 
+3. Run Project
+- npm run dev
+
+## 🚀 Website
+- https://mav-assessment-excercise1.vercel.app/
